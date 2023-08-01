@@ -1,0 +1,85 @@
+TypeScript en pocas palabras, es JavaScript pero con tipado estricto
+hay que declarar las variables con sus tipos
+se puede hacer esto
+
+Mutaciones:
+
+let nombre: string | number = 'Fernando';  //aca vemos que nombre puede ser string o number y se le asigna un string primer
+nombre= 45; esto seria valido porque es numero
+
+-----------------------
+
+
+en caso de que por ejemplo;
+declaro una const edad=35; esto va a ser 35, no va a ser tipo numero, porque como es una constante, no va a cambiar
+no necesita que le aclaren el tipo de dato
+
+array.join(', ') unir elemento sde arreglos con coma y espacio
+
+-------
+let array:string[] = []; array de tipo string
+
+------------------
+
+objetos literales e interfaces
+
+JSON.stringify( persona ) sirve para transformar un objeto literal en json y mostrarlo
+
+---------------------------
+Type, class, interface
+
+tipar objetos
+
+clase: crear instancias y si tiene una representaicon en js
+type, interface, no tiene sinonimo a javascript
+
+las interfaces sirven para darle reglas de validacion a los objetos:
+
+interface Persona{
+    nombreCompleto: string;
+    edad: number;
+    direccion: Direccion
+}
+interface Direccion{
+    pais: string;
+    casaNo: number;
+
+}
+export const ObjetosLiterales = () => {
+    const persona: Persona ={
+        nombreCompleto: 'Alan Lasco',
+        edad:26,
+        direccion: {
+            pais: 'Argentina',
+            casaNo: 2662
+        }
+
+se oberva como se declara el objeto literal, y se crean interfaces para darle tipos al objeto que va a ser de tipo
+de la interfaz al igual que la direccion que tambien es un objeto
+
+---------------
+
+funciones, al igual que los lenguajes que ya vi en la facu
+se le puede poner un tipo de retorno a las funciones
+
+    const sumar= ():number =>{
+        return 1+5
+    }
+
+y los parametros, se les da el tipo de dato igual que los demas leguajes
+
+
+-------------------
+
+ctrl shift p, json as code
+paginas de interes
+postman
+
+https://app.quicktype.io/
+
+todo esto para darle tipos a los endpoint que vienen en las apis
+
+si selecciono un nombre de variable o lo que sea y aprieto f2 le puedo cambiar el nombre
+a todas las variables con ese nombre
+
+rafc para crear el template de el componente
